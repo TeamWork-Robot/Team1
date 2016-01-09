@@ -1,4 +1,4 @@
-SRCS = Point.c test_point.c testmain.c
+SRCS = Point.cpp test_point.cpp testmain.cpp
 HDRS = Pointe.h test_point.h
 PROJ = test-point
 
