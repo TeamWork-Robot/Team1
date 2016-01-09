@@ -12,7 +12,7 @@ int main()
 	r.addListener(&rc); // 准备好结果收集器
 
 	CppUnit::TestRunner runner; // 定义执行实体
-	runner.addTest(CppUnit::TestFactoryRegistry::getRegistry("alltest").makeTest("testpoint"));
+	runner.addTest(CppUnit::TestFactoryRegistry::getRegistry("alltest").makeTest());
 	runner.run(r); // 运行测试
 
 	CppUnit::TextOutputter o(&rc, std::cout);
