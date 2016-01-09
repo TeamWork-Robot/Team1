@@ -18,7 +18,7 @@ int main()
 	CppUnit::TextOutputter o(&rc, std::cout);
 	o.write(); // 将结果输出
 
-	system("pause");
+	//system("pause");
 
 	return rc.wasSuccessful() ? 0 : -1;
 }
