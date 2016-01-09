@@ -2,7 +2,6 @@ SRCS = Point.c test_point.c testmain.c
 HDRS = Pointe.h test_point.h
 PROJ = test-point
 
-
 CC = gcc
 OBJS = $(SRCS:.cpp=.o)
 APP = $(PROJ)
