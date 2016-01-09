@@ -18,8 +18,8 @@ testmain.o: testmain.cpp
 Point.o: Point.cpp Point.h
 	$(CC) $(CFLAGS) $< -o $@
          
-test_point.o: test_point.cpp test_point.h 
-	$(CC) $(CFLAGS) $< -o $@
+test_point.o: test_point.cpp test_point.h Point.h
+	$(CC) $(CFLAGS) $< -c test_point.cpp
 
 clean:
 	rm -f *.o $(APP)
