@@ -13,13 +13,13 @@ $(APP): testmain.o test_point.o Point.o
 	$(CC) $(LDFLAGS) testmain.o test_point.o Point.o -o $(APP) $(LIBS)
 
 testmain.o: testmain.cpp 
-	    $(CC) $(CFLAGS) $< -o $@
+	$(CC) $(CFLAGS) $< -o $@
 
 Point.o: Point.cpp Point.h
-         $(CC) $(CFLAGS) $< -o $@s
+	$(CC) $(CFLAGS) $< -o $@s
          
 test_point.o: test_point.cpp test_point.h
-              $(CC) $(CFLAGS) $< -o $@s
+	$(CC) $(CFLAGS) $< -o $@s
 
 clean:
 	rm -f *.o $(APP)
