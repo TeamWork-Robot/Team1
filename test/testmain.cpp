@@ -9,14 +9,14 @@ int main()
 {
 	CppUnit::TestResult r;
 	CppUnit::TestResultCollector rc;
-	r.addListener(&rc); // ×¼±¸ºÃ½á¹ûÊÕ¼¯Æ÷
+	r.addListener(&rc); // å‡†å¤‡å¥½ç»“æœæ”¶é›†å™¨
 
-	CppUnit::TestRunner runner; // ¶¨ÒåÖ´ĞĞÊµÌå
-	runner.addTest(CppUnit::TestFactoryRegistry::getRegistry("alltest").makeTest());
-	runner.run(r); // ÔËĞĞ²âÊÔ
+	CppUnit::TestRunner runner; // å®šä¹‰æ‰§è¡Œå®ä½“
+	runner.addTest(CppUnit::TestFactoryRegistry::getRegistry("alltest").makeTest("testpoint"));
+	runner.run(r); // è¿è¡Œæµ‹è¯•
 
 	CppUnit::TextOutputter o(&rc, std::cout);
-	o.write(); // ½«½á¹ûÊä³ö
+	o.write(); // å°†ç»“æœè¾“å‡º
 
 	system("pause");
 
