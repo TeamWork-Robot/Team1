@@ -1,5 +1,3 @@
-SRCS = Point.cpp test_point.cpp testmain.cpp
-HDRS = Pointe.h test_point.h
 PROJ = test-point
 
 CC = gcc
@@ -11,11 +9,17 @@ LIBS = -lcppunit -ldl
 
 all: $(APP)
 
-$(APP): $(SRCS)
-	$(CC) $(LDFLAGS) $(OBJS) -o $(APP) $(LIBS)
+$(APP): testmain.o test_point.o Point.o
+	$(CC) $(LDFLAGS) testmain.o test_point.o Point.o -o $(APP) $(LIBS)
 
-%.o: %.cpp $(HDRS)
-	$(CC) $(CFLAGS) $< -o $@
+testmain.o: testmain.cpp 
+	    $(CC) $(CFLAGS) $< -o $@
+
+Point.o: Point.cpp Point.h
+         $(CC) $(CFLAGS) $< -o $@s
+         
+test_point.o: test_point.cpp test_point.h
+              $(CC) $(CFLAGS) $< -o $@s
 
 clean:
 	rm -f *.o $(APP)
