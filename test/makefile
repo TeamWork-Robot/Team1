@@ -16,10 +16,10 @@ testmain.o: testmain.cpp
 	$(CC) $(CFLAGS) $< -o $@
 
 Point.o: Point.cpp Point.h
-	$(CC) $(CFLAGS) $< -o $@s
+	$(CC) $(CFLAGS) $< -o $@
          
 test_point.o: test_point.cpp test_point.h Point.h
-	$(CC) $(CFLAGS) $< -o $@s
+	$(CC) $(CFLAGS) $< -o $@
 
 clean:
 	rm -f *.o $(APP)
