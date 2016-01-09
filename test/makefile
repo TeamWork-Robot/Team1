@@ -9,7 +9,7 @@ LIBS = -lcppunit -ldl
 
 all: $(APP)
 
-$(APP): testmain.o test_point.o Point.o
+$(APP): testmain.o Point.o test_point.o
 	$(CC) $(LDFLAGS) testmain.o test_point.o Point.o -o $(APP) $(LIBS)
 
 testmain.o: testmain.cpp 
