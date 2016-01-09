@@ -18,7 +18,7 @@ testmain.o: testmain.cpp
 Point.o: Point.cpp Point.h
 	$(CC) $(CFLAGS) $< -o $@s
          
-test_point.o: test_point.cpp test_point.h
+test_point.o: test_point.cpp test_point.h Point.h
 	$(CC) $(CFLAGS) $< -o $@s
 
 clean:
